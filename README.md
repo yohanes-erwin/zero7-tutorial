@@ -13,3 +13,5 @@
 ### 2. Neural Network Example
 
 <img src="https://github.com/yohanes-erwin/zero7-tutorial/blob/main/doc/zero7-nn.gif" width="800" />
+
+<img src="https://github.com/yohanes-erwin/zero7-tutorial/blob/main/doc/top_nn.jpg" width="800" />
