@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../../rtl/module/debounding.v" \
+"../../../../../../rtl/module/nn.v" \
+"../../../../../../rtl/module/pe.v" \
+"../../../../../../rtl/module/register.v" \
+"../../../../../../rtl/module/sigmoid.v" \
+"../../../../../../rtl/module/systolic.v" \
+"../../../../../../rtl/module/top_nn.v" \
+"../../../../../../rtl/testbench/top_nn_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
