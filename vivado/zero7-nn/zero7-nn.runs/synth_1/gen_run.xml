@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s25csga225-1" LaunchTime="1794987617">
+<GenRun Id="synth_1" LaunchPart="xc7s25csga225-1" LaunchTime="1795139266">
   <File Type="PA-TCL" Name="top_nn.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_nn_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_nn_reports.tcl"/>
@@ -11,7 +11,7 @@
   <File Type="VDS-TIMING-PB" Name="top_nn_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../rtl/module/debounding.v">
+    <File Path="$PPRDIR/../../rtl/module/debouncing.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

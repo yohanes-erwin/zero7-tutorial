@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Nov 18 14:40:18 2026
-# Process ID: 29244
+# Start of session at: Fri Nov 20 08:47:53 2026
+# Process ID: 3288
 # Current directory: D:/Repository/zero7-tutorial/vivado/zero7-nn/zero7-nn.runs/synth_1
 # Command line: vivado.exe -log top_nn.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_nn.tcl
 # Log file: D:/Repository/zero7-tutorial/vivado/zero7-nn/zero7-nn.runs/synth_1/top_nn.vds
@@ -17,14 +17,14 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s25'
 INFO: [Device 21-403] Loading part xc7s25csga225-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28532
+INFO: [Synth 8-7075] Helper process launched with PID 25212
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_nn' [D:/Repository/zero7-tutorial/rtl/module/top_nn.v:3]
-INFO: [Synth 8-6157] synthesizing module 'debouncing' [D:/Repository/zero7-tutorial/rtl/module/debounding.v:4]
-INFO: [Synth 8-226] default block is never used [D:/Repository/zero7-tutorial/rtl/module/debounding.v:47]
-INFO: [Synth 8-6155] done synthesizing module 'debouncing' (1#1) [D:/Repository/zero7-tutorial/rtl/module/debounding.v:4]
+INFO: [Synth 8-6157] synthesizing module 'debouncing' [D:/Repository/zero7-tutorial/rtl/module/debouncing.v:4]
+INFO: [Synth 8-226] default block is never used [D:/Repository/zero7-tutorial/rtl/module/debouncing.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'debouncing' (1#1) [D:/Repository/zero7-tutorial/rtl/module/debouncing.v:4]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/Repository/zero7-tutorial/rtl/module/top_nn.v:71]
 INFO: [Synth 8-6157] synthesizing module 'nn' [D:/Repository/zero7-tutorial/rtl/module/nn.v:3]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
@@ -32,7 +32,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/ProgramFiles/Xi
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
 	Parameter CLOCKING_MODE bound to: common_clock - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
-	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_FILE bound to: wb.mem - type: string 
 	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
 	Parameter USE_MEM_INIT bound to: 1 - type: integer 
 	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
@@ -58,10 +58,60 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/ProgramFiles/Xi
 	Parameter RST_MODE_B bound to: SYNC - type: string 
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:492]
+INFO: [Synth 8-3876] $readmem data file 'wb.mem' is read successfully [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1127]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (2#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (3#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram__parameterized0' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
+	Parameter MEMORY_SIZE bound to: 256 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: k.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 2 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: write_first - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 2 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: write_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-3876] $readmem data file 'k.mem' is read successfully [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1127]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (3#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized0' (3#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
+INFO: [Synth 8-6157] synthesizing module 'register' [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register' (4#1) [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
+INFO: [Synth 8-6157] synthesizing module 'systolic' [D:/Repository/zero7-tutorial/rtl/module/systolic.v:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC_BIT bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pe' [D:/Repository/zero7-tutorial/rtl/module/pe.v:3]
+	Parameter WIDTH bound to: 16 - type: integer 
+	Parameter FRAC_BIT bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pe' (5#1) [D:/Repository/zero7-tutorial/rtl/module/pe.v:3]
+INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (5#1) [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'systolic' (6#1) [D:/Repository/zero7-tutorial/rtl/module/systolic.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sigmoid' [D:/Repository/zero7-tutorial/rtl/module/sigmoid.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'sigmoid' (7#1) [D:/Repository/zero7-tutorial/rtl/module/sigmoid.v:12]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram__parameterized1' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
 	Parameter MEMORY_SIZE bound to: 256 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
 	Parameter CLOCKING_MODE bound to: common_clock - type: string 
@@ -90,42 +140,26 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram__parameterized0' [C:
 	Parameter READ_LATENCY_B bound to: 1 - type: integer 
 	Parameter WRITE_MODE_B bound to: write_first - type: string 
 	Parameter RST_MODE_B bound to: SYNC - type: string 
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
 INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:492]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (3#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized0' (3#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
-INFO: [Synth 8-6157] synthesizing module 'register' [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
-	Parameter WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'register' (4#1) [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
-INFO: [Synth 8-6157] synthesizing module 'systolic' [D:/Repository/zero7-tutorial/rtl/module/systolic.v:3]
-	Parameter WIDTH bound to: 16 - type: integer 
-	Parameter FRAC_BIT bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'pe' [D:/Repository/zero7-tutorial/rtl/module/pe.v:3]
-	Parameter WIDTH bound to: 16 - type: integer 
-	Parameter FRAC_BIT bound to: 10 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pe' (5#1) [D:/Repository/zero7-tutorial/rtl/module/pe.v:3]
-INFO: [Synth 8-6157] synthesizing module 'register__parameterized0' [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
-	Parameter WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'register__parameterized0' (5#1) [D:/Repository/zero7-tutorial/rtl/module/register.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'systolic' (6#1) [D:/Repository/zero7-tutorial/rtl/module/systolic.v:3]
-INFO: [Synth 8-6157] synthesizing module 'sigmoid' [D:/Repository/zero7-tutorial/rtl/module/sigmoid.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'sigmoid' (7#1) [D:/Repository/zero7-tutorial/rtl/module/sigmoid.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (7#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized1' (7#1) [C:/ProgramFiles/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]
 INFO: [Synth 8-6155] done synthesizing module 'nn' (8#1) [D:/Repository/zero7-tutorial/rtl/module/nn.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'top_nn' (9#1) [D:/Repository/zero7-tutorial/rtl/module/top_nn.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1147.879 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -142,20 +176,20 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_nn_propI
 INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1147.879 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s25csga225-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -164,7 +198,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for nn_0/xpm_memory_tdpram_wb. (const
 Applied set_property KEEP_HIERARCHY = SOFT for nn_0/xpm_memory_tdpram_a. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for nn_0/xpm_memory_tdpram_k. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'debouncing'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'top_nn'
@@ -183,6 +217,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 't
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'debouncing'
 INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
 INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized0:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized1:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -195,7 +230,7 @@ INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized0:/gen_wr_b.gen_b
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'top_nn'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -310,9 +345,11 @@ DSP Report: operator nn_0/dut/pe03/y_out_i is absorbed into DSP nn_0/dut/pe03/y_
 INFO: [Synth 8-6851] RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 INFO: [Synth 8-6851] RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 INFO: [Synth 8-6851] RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+INFO: [Synth 8-6851] RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+INFO: [Synth 8-6851] RAM (gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 INFO: [Synth 8-6851] RAM (gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -334,7 +371,9 @@ Block RAM: Preliminary Mapping Report (see note below)
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                      | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 8 x 64(WRITE_FIRST)    | W | R | 8 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
 |xpm_memory_base__parameterized0: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 4 x 64(WRITE_FIRST)    | W | R | 4 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
+|xpm_memory_base__parameterized1: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 4 x 64(WRITE_FIRST)    | W | R | 4 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -369,13 +408,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1148.992 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1147.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -385,7 +424,9 @@ Block RAM: Final Mapping Report
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                      | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 8 x 64(WRITE_FIRST)    | W | R | 8 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
 |xpm_memory_base__parameterized0: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 4 x 64(WRITE_FIRST)    | W | R | 4 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
+|xpm_memory_base__parameterized1: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 4 x 64(WRITE_FIRST)    | W | R | 4 x 64(WRITE_FIRST)    | W | R | Port A and B     | 0      | 2      | 
 +---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -394,10 +435,14 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_wb/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_wb/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_k/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_k/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_a/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance nn_0/xpm_memory_tdpram_a/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1172.367 ; gain = 23.375
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1172.348 ; gain = 24.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -415,37 +460,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.113 ; gain = 39.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.113 ; gain = 39.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.113 ; gain = 39.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.113 ; gain = 39.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.164 ; gain = 39.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.164 ; gain = 39.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -479,42 +524,42 @@ Report Cell Usage:
 |1     |BUFG     |     1|
 |2     |CARRY4   |    65|
 |3     |DSP48E1  |    16|
-|7     |LUT1     |     9|
-|8     |LUT2     |   251|
-|9     |LUT3     |    50|
-|10    |LUT4     |   155|
-|11    |LUT5     |    23|
-|12    |LUT6     |   144|
-|13    |MUXF7    |    40|
-|14    |MUXF8    |    20|
-|15    |RAMB36E1 |     2|
-|16    |SRL16E   |    20|
-|17    |FDRE     |   509|
-|18    |FDSE     |     2|
-|19    |IBUF     |     3|
-|20    |OBUF     |     3|
+|9     |LUT1     |     9|
+|10    |LUT2     |   289|
+|11    |LUT3     |   132|
+|12    |LUT4     |   127|
+|13    |LUT5     |   104|
+|14    |LUT6     |   141|
+|15    |MUXF7    |    40|
+|16    |MUXF8    |    20|
+|17    |RAMB36E1 |     6|
+|22    |SRL16E   |    20|
+|23    |FDRE     |   701|
+|24    |FDSE     |     2|
+|25    |IBUF     |     3|
+|26    |OBUF     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.164 ; gain = 39.285
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1187.191 ; gain = 38.199
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.191 ; gain = 38.199
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1187.164 ; gain = 39.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1187.164 ; gain = 39.285
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1199.242 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1199.180 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 147 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1202.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1204.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 77ad4c56
+Synth Design complete, checksum: 6e017cc0
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1202.906 ; gain = 53.914
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1204.844 ; gain = 56.965
 INFO: [Common 17-1381] The checkpoint 'D:/Repository/zero7-tutorial/vivado/zero7-nn/zero7-nn.runs/synth_1/top_nn.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_nn_utilization_synth.rpt -pb top_nn_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 18 14:40:42 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 20 08:48:17 2026...

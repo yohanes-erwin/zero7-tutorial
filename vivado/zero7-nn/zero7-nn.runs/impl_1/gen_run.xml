@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s25csga225-1" LaunchTime="1794987649">
+<GenRun Id="impl_1" LaunchPart="xc7s25csga225-1" LaunchTime="1795139306">
   <File Type="ROUTE-PWR" Name="top_nn_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top_nn.tcl"/>
   <File Type="BITSTR-MMI" Name="top_nn.mmi"/>
@@ -77,7 +77,7 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../rtl/module/debounding.v">
+    <File Path="$PPRDIR/../../rtl/module/debouncing.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

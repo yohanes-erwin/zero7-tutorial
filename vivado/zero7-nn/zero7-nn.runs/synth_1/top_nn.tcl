@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s25csga225-1
 
@@ -93,7 +90,7 @@ read_mem {
   D:/Repository/zero7-tutorial/rtl/module/k.mem
 }
 read_verilog -library xil_defaultlib {
-  D:/Repository/zero7-tutorial/rtl/module/debounding.v
+  D:/Repository/zero7-tutorial/rtl/module/debouncing.v
   D:/Repository/zero7-tutorial/rtl/module/nn.v
   D:/Repository/zero7-tutorial/rtl/module/pe.v
   D:/Repository/zero7-tutorial/rtl/module/register.v

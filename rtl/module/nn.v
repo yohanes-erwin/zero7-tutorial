@@ -100,7 +100,7 @@ module nn
         .MEMORY_SIZE(512),                   // DECIMAL, size: 8x64bit= 512 bits
         .MEMORY_PRIMITIVE("auto"),           // String
         .CLOCKING_MODE("common_clock"),      // String, "common_clock"
-        .MEMORY_INIT_FILE("none"),           // String
+        .MEMORY_INIT_FILE("wb.mem"),         // String, load from file wb.mem
         .MEMORY_INIT_PARAM("0"),             // String      
         .USE_MEM_INIT(1),                    // DECIMAL
         .WAKEUP_TIME("disable_sleep"),       // String
@@ -176,7 +176,7 @@ module nn
         .MEMORY_SIZE(256),                   // DECIMAL, size: 4x64bit= 256 bits
         .MEMORY_PRIMITIVE("auto"),           // String
         .CLOCKING_MODE("common_clock"),      // String, "common_clock"
-        .MEMORY_INIT_FILE("none"),           // String
+        .MEMORY_INIT_FILE("k.mem"),          // String, load from file k.mem
         .MEMORY_INIT_PARAM("0"),             // String      
         .USE_MEM_INIT(1),                    // DECIMAL
         .WAKEUP_TIME("disable_sleep"),       // String
